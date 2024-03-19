@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: black dotted;
+    flex-grow: 1;
+
+}
+.gameContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+.gameContainer button{
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    width: 100px;
+    height: 50px;
+}
+.btnContainer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
