@@ -139,4 +139,50 @@
 // BY me from 0
 
 
+const playerText = document.querySelector('#playerText');
+const computerText = document.querySelector('#computerText');
+const resultsText = document.querySelector('#resultsText');
+const btn = document.querySelectorAll('.btn');
+let player;
+let computer;
+let results;
 
+btn.forEach(button => button.addEventListener('click', () => {
+
+    player = button.textContent;
+    computerSelection();
+    playerText.textContent = `Player: ${player}`;
+    computerText.textContent = `Computer: ${computer}`;
+    resultsText.textContet = roundGame();
+}));
+
+function computerSelection(){
+    const randomNumber = Math.floor(Math.random()*3)+1;
+
+    switch(randomNumber){
+        case 1:
+            computer = 'rock';
+            break;
+        case 2:
+            computer = 'paper';
+            break;
+        case 3:
+            computer = 'scissors';
+            break;
+    }
+    
+
+};
+function roundGame(){
+    if (player == computer){
+        resultsText.textContent = 'Results: DRAW '
+    }else if (player == 'paper' && computer == 'rock'){
+        resultsText.textContent = 'Results: You Win!! '
+    }else if (player == 'rock' && computer == 'scissors'){
+        resultsText.textContent = 'Results: You Win!! '
+    }else if (player == 'scissors' && computer == 'paper'){
+        resultsText.textContent = 'Results: You Win!! '
+    }else {
+        resultsText.textContent = 'Results: You Lose!! '
+    }
+};
